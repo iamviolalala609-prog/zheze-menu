@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>能说会道 · 生料啫啫煲 | 风物志</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+QingKe+HuangYou&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html, body { background: #170a02; }
+body { min-height: 100vh; display: flex; justify-content: center; }
+.zz { width: 100%; max-width: 420px; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #170a02; color: #f3e3cd; overflow: hidden; position: relative; }
+.brush { font-family: 'Ma Shan Zheng', serif; }
+.qk { font-family: 'ZCOOL QingKe HuangYou', sans-serif; }
+
+.zz-cover { padding: 8px 0 30px; text-align: center; position: relative; background: #1f0c02; }
+.zz-eyebrow { font-size: 11px; letter-spacing: 5px; color: #e8945a; margin: 18px 0 2px; }
+.zz-cover-title { font-size: 30px; color: #f3e3cd; line-height: 1.2; }
+.zz-cover-title em { font-style: normal; color: #ff8a3d; font-size: 58px; display: block; margin: 2px 0 4px; }
+.zz-cover-sub { font-size: 13px; color: rgba(243,227,205,0.55); margin-top: 12px; line-height: 1.8; }
+.zz-seal { display:inline-block; margin-top:14px; padding:5px 12px; border:1.5px solid #c4361f; color:#e8654a; font-size:12px; letter-spacing:2px; border-radius:3px; }
+.zz-hint { margin-top: 18px; font-size: 11px; color: rgba(243,227,205,0.4); }
+.zz-hint i { display:block; font-style:normal; font-size:18px; margin-top:2px; color:#e8945a; animation:bob 1.6s ease-in-out infinite; }
+@keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
+
+.zz-ch { position: relative; padding-top: 26px; }
+.zz-chnum { font-size: 11px; letter-spacing: 3px; color: #e8945a; padding: 0 26px; }
+.zz-chnum span { color: rgba(243,227,205,0.3); }
+.zz-chtitle { font-size: 30px; padding: 4px 26px 0; line-height: 1.3; color:#f3e3cd; }
+.zz-chtitle b { color: #ff8a3d; font-weight: normal; }
+.zz-art { margin: 14px 18px 4px; border-radius: 14px; background: #25130552; border: 1px solid rgba(232,120,50,0.18); overflow: hidden; }
+.zz-body { padding: 6px 26px 0; font-size: 14px; line-height: 1.9; color: rgba(243,227,205,0.74); }
+.zz-body b { color: #ffa766; font-weight: 500; }
+.zz-body p { margin-bottom: 10px; }
+.zz-fact { margin: 14px 26px 0; padding: 13px 16px; background: rgba(232,100,30,0.07); border-left: 3px solid #d8551f; }
+.zz-fact-l { font-size: 10px; letter-spacing: 2px; color: #e8945a; margin-bottom: 5px; }
+.zz-fact-t { font-size: 13px; color: rgba(243,227,205,0.82); line-height: 1.7; }
+.zz-fact-t b { color:#ffa766; }
+
+.zz-steps { padding: 8px 26px 0; }
+.zz-step { display: flex; gap: 12px; margin-bottom: 13px; }
+.zz-snum { width: 28px; height: 28px; border-radius:50%; background: rgba(255,138,61,0.13); border: 1px solid rgba(255,138,61,0.4); color: #ff8a3d; font-size:14px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.zz-st { font-size: 14px; font-weight: 500; color: #f3e3cd; margin-bottom: 2px; }
+.zz-sd { font-size: 12px; color: rgba(243,227,205,0.55); line-height: 1.6; }
+
+.zz-chips { display:flex; flex-wrap:wrap; gap:8px; padding: 8px 26px 0; }
+.zz-chip { background: rgba(255,255,255,0.04); border: 1px solid rgba(232,120,50,0.22); border-radius:20px; padding:7px 13px; font-size:12px; color:rgba(243,227,205,0.78); }
+.zz-chip b { color:#ffa766; font-weight:500; }
+
+.zz-taste { padding: 6px 26px 0; }
+.zz-tr { display:flex; gap:12px; padding:11px 0; border-bottom:1px solid rgba(255,255,255,0.06); }
+.zz-tr:last-child { border-bottom:none; }
+.zz-tn { width:30px; height:30px; flex-shrink:0; color:#ff8a3d; }
+.zz-ts { font-size:14px; font-weight:500; color:#ffa766; margin-bottom:2px; }
+.zz-td { font-size:13px; color:rgba(243,227,205,0.66); line-height:1.65; }
+.zz-td b { color:#ffa766; }
+
+.zz-foot { padding: 30px 26px 38px; text-align:center; background:#1f0c02; margin-top: 24px; }
+.zz-foot-t { font-size: 26px; color:#ff8a3d; margin-bottom:6px; }
+.zz-foot-s { font-size:12px; color:rgba(243,227,205,0.5); line-height:1.9; }
+.zz-cta { display:inline-block; margin-top:16px; padding:10px 22px; background:rgba(255,138,61,0.12); border:1px solid rgba(255,138,61,0.4); color:#ffa766; font-size:13px; border-radius:24px; }
+
+.flame { transform-box: fill-box; transform-origin: 50% 100%; animation: flick 1.7s ease-in-out infinite; }
+.flame2 { transform-box: fill-box; transform-origin: 50% 100%; animation: flick2 2.1s ease-in-out infinite; }
+@keyframes flick { 0%,100%{transform:scaleY(1) scaleX(1)} 50%{transform:scaleY(1.09) scaleX(0.96) translateY(-3px)} }
+@keyframes flick2 { 0%,100%{transform:scaleY(1)} 50%{transform:scaleY(0.93) scaleX(1.04) translateY(2px)} }
+.steam { transform-box: fill-box; transform-origin: 50% 100%; animation: rise 3.4s ease-in-out infinite; }
+@keyframes rise { 0%{opacity:0; transform:translateY(6px) scaleX(0.9)} 45%{opacity:0.7} 100%{opacity:0; transform:translateY(-16px) scaleX(1.15)} }
+.spark { animation: tw 1.5s ease-in-out infinite; }
+@keyframes tw { 0%,100%{opacity:0.25} 50%{opacity:1} }
+</style>
+</head>
+<body>
+<div class="zz">
+
+  <div class="zz-cover">
+    <svg width="100%" viewBox="0 0 360 300" role="img" aria-label="瓦煲在炭炉上，火苗窜起、锅气升腾">
+      <ellipse cx="180" cy="150" rx="150" ry="150" fill="#3a1604" opacity="0.45"/>
+      <ellipse cx="180" cy="160" rx="100" ry="110" fill="#5a2206" opacity="0.4"/>
+      <g class="flame2">
+        <path d="M150 200 C128 158 150 138 146 96 C166 130 168 162 180 188 C176 198 162 206 150 200 Z" fill="#b8380c"/>
+        <path d="M214 202 C196 156 218 130 214 86 C236 122 232 158 224 190 C220 200 224 204 214 202 Z" fill="#b8380c"/>
+      </g>
+      <g class="flame">
+        <path d="M120 208 C104 178 120 158 116 124 C134 150 134 180 142 200 C138 208 128 212 120 208 Z" fill="#c8410f"/>
+        <path d="M250 208 C268 176 252 156 256 122 C238 150 238 180 230 200 C234 208 244 212 250 208 Z" fill="#c8410f"/>
+      </g>
+      <path d="M122 258 L238 258 L250 296 L110 296 Z" fill="#241303" stroke="#0c0702" stroke-width="2.5" stroke-linejoin="round"/>
+      <ellipse cx="180" cy="258" rx="60" ry="11" fill="#160c03" stroke="#0c0702" stroke-width="2.5"/>
+      <circle class="spark" cx="164" cy="258" r="4" fill="#ff8a1f"/>
+      <circle class="spark" cx="184" cy="260" r="5" fill="#ffb030" style="animation-delay:.4s"/>
+      <circle class="spark" cx="202" cy="257" r="3.5" fill="#ff7a14" style="animation-delay:.7s"/>
+      <path d="M110 202 C110 170 250 170 250 202 C250 238 226 260 180 260 C134 260 110 238 110 202 Z" fill="#5b3015" stroke="#1c0d03" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M124 228 C140 250 220 250 236 228 C232 246 212 256 180 256 C148 256 128 246 124 228 Z" fill="#3f2010"/>
+      <path d="M150 184 C158 178 202 178 210 184" fill="none" stroke="#7a4524" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="180" cy="190" rx="66" ry="15" fill="#341b0c" stroke="#1c0d03" stroke-width="3"/>
+      <path d="M122 186 C130 148 230 148 238 186 Z" fill="#71401f" stroke="#1c0d03" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M138 168 C150 156 210 156 222 168" fill="none" stroke="#9a5f34" stroke-width="2.5" stroke-linecap="round"/>
+      <ellipse cx="180" cy="150" rx="11" ry="9" fill="#8a5230" stroke="#1c0d03" stroke-width="3"/>
+      <g class="flame">
+        <path d="M150 198 C134 168 152 150 148 118 C166 144 164 174 174 194 C170 202 160 204 150 198 Z" fill="#ee6a1f"/>
+        <path d="M212 200 C196 166 214 146 210 114 C230 142 226 174 222 194 C220 202 222 204 212 200 Z" fill="#ee6a1f"/>
+      </g>
+      <g class="flame2">
+        <path d="M158 196 C148 174 160 160 158 138 C170 158 170 178 176 192 C172 198 164 200 158 196 Z" fill="#f7c948"/>
+        <path d="M206 196 C196 172 208 158 206 136 C218 158 214 180 214 192 C212 198 210 200 206 196 Z" fill="#f7c948"/>
+      </g>
+      <path class="steam" d="M168 132 C160 118 178 110 170 96 C164 86 176 78 172 66" fill="none" stroke="#e7d8c4" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+      <path class="steam" d="M192 130 C200 116 184 108 192 94 C198 84 188 76 192 64" fill="none" stroke="#e7d8c4" stroke-width="3" stroke-linecap="round" opacity="0.5" style="animation-delay:1.2s"/>
+      <path class="steam" d="M180 126 C174 114 188 106 182 92" fill="none" stroke="#e7d8c4" stroke-width="3" stroke-linecap="round" opacity="0.5" style="animation-delay:2.1s"/>
+      <path d="M236 176 C248 170 256 176 262 170" fill="none" stroke="#7fa343" stroke-width="3" stroke-linecap="round"/>
+      <path d="M240 182 C250 180 256 184 264 180" fill="none" stroke="#9bbd5a" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <div class="zz-eyebrow">广 西 北 海 · 和 兴 夜 市</div>
+    <div class="zz-cover-title">一锅<em class="brush">啫啫煲</em>的风物志</div>
+    <div class="zz-cover-sub">等餐的这几分钟<br>听我们讲讲这锅"会唱歌"的菜</div>
+    <div class="zz-seal qk">生料现做 · 仅此一摊</div>
+    <div class="zz-hint">向下滑，开始探索<i>↓</i></div>
+  </div>
+
+  <div class="zz-ch">
+    <div class="zz-chnum">第 一 章 <span>/ 它从哪来</span></div>
+    <div class="zz-chtitle brush">一声"啫啫"<br><b>从广州大排档而来</b></div>
+    <div class="zz-art">
+      <svg width="100%" viewBox="0 0 340 150" role="img" aria-label="大排档夜景：红灯笼、瓦煲与小木凳">
+        <circle cx="270" cy="58" r="46" fill="#3a1c06" opacity="0.6"/>
+        <path d="M254 24 L286 24" stroke="#caa15a" stroke-width="3" stroke-linecap="round"/>
+        <ellipse cx="270" cy="50" rx="22" ry="26" fill="#c4361f" stroke="#1c0d03" stroke-width="2.5"/>
+        <path d="M255 42 L285 42 M256 58 L284 58" stroke="#8a2414" stroke-width="2"/>
+        <path d="M270 76 L270 90" stroke="#caa15a" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M40 122 L300 122" stroke="#5a3414" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M70 110 C70 92 142 92 142 110 C142 122 126 130 106 130 C86 130 70 122 70 110 Z" fill="#5b3015" stroke="#1c0d03" stroke-width="2.5" stroke-linejoin="round"/>
+        <ellipse cx="106" cy="104" rx="34" ry="8" fill="#341b0c" stroke="#1c0d03" stroke-width="2.5"/>
+        <path d="M78 102 C84 80 128 80 134 102 Z" fill="#71401f" stroke="#1c0d03" stroke-width="2.5" stroke-linejoin="round"/>
+        <ellipse cx="106" cy="80" rx="7" ry="6" fill="#8a5230" stroke="#1c0d03" stroke-width="2.5"/>
+        <path class="steam" d="M96 74 C90 62 102 56 96 46" fill="none" stroke="#e7d8c4" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+        <path class="steam" d="M116 74 C122 62 110 56 116 46" fill="none" stroke="#e7d8c4" stroke-width="2.5" stroke-linecap="round" opacity="0.5" style="animation-delay:1.4s"/>
+        <path d="M176 130 L176 110 L196 110 L196 130 M170 110 L202 110" stroke="#5a3414" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <path d="M222 130 L222 112 L240 112 L240 130 M216 112 L246 112" stroke="#5a3414" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="zz-body">
+      <p>啫啫煲是个"年轻"的粤菜——它诞生于<b>上世纪80年代的广州大排档</b>。当年师傅们为了应付源源不断的客人，发明了这种又快又香的做法。</p>
+      <p>它的名字，来自食材落入滚烫<b>瓦煲</b>时发出的那声<b>"啫——啫——"</b>。不是炒，也不是炖，而是用<b>猛火干逼</b>把食材的水分逼出，让香气一层层叠起来。一锅好啫啫煲端上桌，是<b>先听到声、再闻到香、最后才尝到味</b>。</p>
+    </div>
+    <div class="zz-fact">
+      <div class="zz-fact-l">冷 知 识</div>
+      <div class="zz-fact-t">"啫"普通话读 <b>zhě</b>、粤语读 <b>jué</b>——专门形容食材遇到极热瓦煲时那种高温爆香的声音。原煲上桌，常常还在"啫啫"作响。</div>
+    </div>
+  </div>
+
+  <div class="zz-ch">
+    <div class="zz-chnum">第 二 章 <span>/ 怎么做的</span></div>
+    <div class="zz-chtitle brush">为什么我们坚持<br><b>"生啫"不省事</b></div>
+    <div class="zz-art">
+      <svg width="100%" viewBox="0 0 340 150" role="img" aria-label="淋米酒后火苗窜起，旁边一个毛笔啫字">
+        <g transform="rotate(-32 250 40)">
+          <rect x="236" y="20" width="22" height="44" rx="5" fill="#3a6a3a" stroke="#1c0d03" stroke-width="2.5"/>
+          <rect x="242" y="10" width="10" height="14" rx="2" fill="#2a4f2a" stroke="#1c0d03" stroke-width="2.5"/>
+          <rect x="239" y="32" width="16" height="18" rx="2" fill="#e7d8c4" opacity="0.85"/>
+        </g>
+        <path d="M214 60 C206 78 200 92 192 104" fill="none" stroke="#cfe0ef" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+        <g class="flame">
+          <path d="M150 110 C132 78 152 58 148 26 C168 54 166 86 178 106 C172 114 160 116 150 110 Z" fill="#ee6a1f"/>
+          <path d="M178 112 C162 82 180 64 176 36 C196 62 192 92 190 108 C188 114 188 114 178 112 Z" fill="#f7c948"/>
+          <path d="M120 116 C106 90 122 72 118 46 C136 70 134 98 142 112 C138 118 128 120 120 116 Z" fill="#c8410f"/>
+        </g>
+        <path d="M70 116 C70 96 178 96 178 116 C178 132 156 142 124 142 C92 142 70 132 70 116 Z" fill="#5b3015" stroke="#1c0d03" stroke-width="3" stroke-linejoin="round"/>
+        <ellipse cx="124" cy="108" rx="50" ry="10" fill="#341b0c" stroke="#1c0d03" stroke-width="3"/>
+        <text x="250" y="118" class="brush" font-size="34" fill="#ff8a3d">啫!</text>
+        <path d="M214 120 L226 110 M222 134 L234 126 M210 138 L218 132" stroke="#f7c948" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="zz-body">
+      <p>啫啫煲分<b>生啫</b>和<b>熟啫</b>：熟啫是把食材先煮到七八成熟再下煲——省时、好控制；而生啫，是把<b>新鲜生料直接下瓦煲</b>，全程猛火干逼到熟，<b>不加一滴水</b>。我们做的，就是更难的那种。</p>
+    </div>
+    <div class="zz-steps">
+      <div class="zz-step"><div class="zz-snum">1</div><div><div class="zz-st">烧热瓦煲</div><div class="zz-sd">瓦煲先干烧到极热，这是锅气的来源</div></div></div>
+      <div class="zz-step"><div class="zz-snum">2</div><div><div class="zz-st">姜蒜爆香</div><div class="zz-sd">姜、蒜、干葱、葱段先爆香铺底</div></div></div>
+      <div class="zz-step"><div class="zz-snum">3</div><div><div class="zz-st">生料入煲</div><div class="zz-sd">新鲜食材直接下，靠高温瞬间锁住鲜味</div></div></div>
+      <div class="zz-step"><div class="zz-snum">4</div><div><div class="zz-st">淋酒啫响</div><div class="zz-sd">沿煲边淋米酒，"啫"地一声、火苗窜起，原煲上桌</div></div></div>
+    </div>
+    <div class="zz-fact">
+      <div class="zz-fact-l">我 们 的 坚 持</div>
+      <div class="zz-fact-t">生啫更难、更费火，全程不能停顿，慢几秒就可能焦。但鲜味和锅气都是熟啫给不了的——所以我们全程现做、绝不提前备料，<b>宁可你多等几分钟</b>。</div>
+    </div>
+  </div>
+
+  <div class="zz-ch">
+    <div class="zz-chnum">第 三 章 <span>/ 能啫什么</span></div>
+    <div class="zz-chtitle brush">一口瓦煲<br><b>万物皆可啫</b></div>
+    <div class="zz-art">
+      <svg width="100%" viewBox="0 0 340 130" role="img" aria-label="砧板上的食材速写：葱、辣椒、姜、黄鳝">
+        <path d="M30 104 L310 104" stroke="#5a3414" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M54 100 C50 70 66 50 60 30 C70 52 70 78 72 100" fill="none" stroke="#7fa343" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M64 100 C62 74 76 56 72 38" fill="none" stroke="#9bbd5a" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M104 100 C96 86 96 64 112 56 C128 64 126 86 118 100 Z" fill="#c4361f" stroke="#1c0d03" stroke-width="2.5"/>
+        <path d="M111 56 C112 48 116 44 122 44" fill="none" stroke="#3a6a3a" stroke-width="3" stroke-linecap="round"/>
+        <ellipse cx="166" cy="86" rx="26" ry="16" fill="#caa15a" stroke="#1c0d03" stroke-width="2.5"/>
+        <path d="M150 84 C156 80 178 80 182 86" fill="none" stroke="#8a6a34" stroke-width="2"/>
+        <path d="M222 96 C210 86 214 66 230 64 C246 62 256 78 250 92 C262 86 264 72 256 64" fill="#8a4a24" stroke="#1c0d03" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="230" cy="80" r="2.5" fill="#3a1c06"/>
+        <path d="M286 100 C282 78 294 64 290 46 C300 64 300 84 300 100" fill="none" stroke="#7fa343" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="zz-body">
+      <p>啫啫煲的包容性，是它最迷人的地方。荤的、素的、内脏、河鲜——只要够新鲜，都能在这口瓦煲里逼出锅气。</p>
+    </div>
+    <div class="zz-chips">
+      <div class="zz-chip"><b>禽肉</b> · 鸡煲</div>
+      <div class="zz-chip"><b>红肉</b> · 牛肉 肥牛 排骨</div>
+      <div class="zz-chip"><b>内脏</b> · 生肠 大肠 猪舌</div>
+      <div class="zz-chip"><b>河鲜</b> · 黄鳝 牛蛙</div>
+      <div class="zz-chip"><b>海味</b> · 鱿鱼</div>
+      <div class="zz-chip"><b>时蔬</b> · 茄子 豆角 薯叶</div>
+    </div>
+    <div class="zz-fact">
+      <div class="zz-fact-l">广 西 限 定</div>
+      <div class="zz-fact-t">沙蟹汁豆角用北海沿海特色的沙蟹汁调味，老友薯苗叶则是广西独有的酸辣老友味——<b>这两口，出了广西就吃不到</b>。</div>
+    </div>
+  </div>
+
+  <div class="zz-ch">
+    <div class="zz-chnum">第 四 章 <span>/ 怎么吃</span></div>
+    <div class="zz-chtitle brush">啫啫煲的<br><b>正确打开方式</b></div>
+    <div class="zz-art">
+      <svg width="100%" viewBox="0 0 340 150" role="img" aria-label="瓦煲配一碗插着筷子的白饭">
+        <path class="steam" d="M104 64 C98 52 110 46 104 34" fill="none" stroke="#e7d8c4" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+        <path class="steam" d="M124 64 C130 52 118 46 124 34" fill="none" stroke="#e7d8c4" stroke-width="2.5" stroke-linecap="round" opacity="0.5" style="animation-delay:1.5s"/>
+        <path d="M60 110 C60 88 154 88 154 110 C154 128 132 138 107 138 C82 138 60 128 60 110 Z" fill="#5b3015" stroke="#1c0d03" stroke-width="3" stroke-linejoin="round"/>
+        <ellipse cx="107" cy="98" rx="44" ry="9" fill="#341b0c" stroke="#1c0d03" stroke-width="3"/>
+        <path d="M76 96 C84 76 130 76 138 96 Z" fill="#71401f" stroke="#1c0d03" stroke-width="3" stroke-linejoin="round"/>
+        <ellipse cx="107" cy="76" rx="7" ry="6" fill="#8a5230" stroke="#1c0d03" stroke-width="3"/>
+        <path class="steam" d="M232 70 C226 58 238 52 232 40" fill="none" stroke="#e7d8c4" stroke-width="2.5" stroke-linecap="round" opacity="0.5" style="animation-delay:.7s"/>
+        <path d="M196 104 C196 96 286 96 286 104 C286 124 264 136 241 136 C218 136 196 124 196 104 Z" fill="#e9ddc7" stroke="#1c0d03" stroke-width="3" stroke-linejoin="round"/>
+        <ellipse cx="241" cy="100" rx="44" ry="8" fill="#fbf3e2" stroke="#1c0d03" stroke-width="2.5"/>
+        <path d="M222 96 C228 92 234 96 240 92 C246 96 252 92 258 96" fill="none" stroke="#caa15a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M236 60 L268 104 M246 58 L276 100" stroke="#a8702f" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="zz-taste">
+      <div class="zz-tr">
+        <svg class="zz-tn" viewBox="0 0 30 30" aria-hidden="true"><path d="M8 13 C8 7 22 7 22 14 C22 20 17 23 17 26 M9 15 C5 15 5 11 8 11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><div class="zz-ts">一听</div><div class="zz-td">上桌还在"啫啫"响，趁热揭盖，这一声就是新鲜现做的证明。</div></div>
+      </div>
+      <div class="zz-tr">
+        <svg class="zz-tn" viewBox="0 0 30 30" aria-hidden="true"><path d="M15 7 C10 7 9 13 9 17 C9 22 12 24 15 24 C18 24 21 22 21 17 C21 13 20 7 15 7 Z M15 12 L15 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <div><div class="zz-ts">二闻</div><div class="zz-td">揭盖瞬间，姜蒜酱香扑面而来，先深吸一口气再动筷。</div></div>
+      </div>
+      <div class="zz-tr">
+        <svg class="zz-tn" viewBox="0 0 30 30" aria-hidden="true"><path d="M11 6 L8 24 M16 6 L15 24 M22 8 C23 14 21 18 17 19" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <div><div class="zz-ts">三拌</div><div class="zz-td">趁热把食材和煲底酱汁拌匀，让每一块都裹上浓香。</div></div>
+      </div>
+      <div class="zz-tr">
+        <svg class="zz-tn" viewBox="0 0 30 30" aria-hidden="true"><path d="M6 14 C6 11 24 11 24 14 C24 20 19 23 15 23 C11 23 6 20 6 14 Z M9 13 C12 11 18 11 21 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><div class="zz-ts">四泡饭</div><div class="zz-td">最后用煲底剩下的浓汁拌一碗白饭——这才是灵魂吃法，<b>食得一只煲，留得满嘴香</b>。</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="zz-foot">
+    <div class="zz-foot-t brush">能说会道 · 生料啫啫煲</div>
+    <div class="zz-foot-s">和兴夜市仅此一摊 · 别无分摊<br>中午12点开摊 · 最早20点卖完</div>
+    <div class="zz-cta">现在，安心等你那一锅</div>
+  </div>
+
+</div>
+</body>
+</html>
